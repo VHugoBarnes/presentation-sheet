@@ -1,35 +1,74 @@
+* {
+    margin: 0;
+}
+
 /* El contenedor de la página */
 .main {
-    position: relative;
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
+    width: 782px;
+    height: 1012px;
+    background-image: url("../img/background1.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-/* El tema de la hoja */
 .tema {
-    position: absolute;
-    top: 17%;
-    left: 60%;
-    font-size: 1.2em;
+    padding-top: 22%;
+    padding-left: 213px;
+    padding-bottom: 50px;
+    font-weight: bold;
 }
 
-/* Los subtitulos de la hoja */
-.predeterminado {
-    position: absolute;
-    font-family: Arial, Helvetica, sans-serif;
-    left: 60%;
+.student {
+    padding-left: 213px;
+    padding-top: 10px;
+    padding-bottom: 5px;
 }
 
-/* Los inputs del usuario */
-.input {
-    position: absolute;
-    left: 60%;
+.nombre {
+    padding-left: 213px;
+    padding-bottom: 40px;
+    font-weight: 900;
 }
 
-/* Lugar y fecha */
+.asig {
+    padding-left: 213px;
+    padding-bottom: 5px;
+    font-weight: 900;
+}
+
+.asignatura {
+    padding-left: 213px;
+    padding-bottom: 40px;
+}
+
+.career {
+    padding-left: 213px;
+    padding-bottom: 5px;
+    font-weight: 900;
+}
+
+.carrera {
+    padding-left: 213px;
+    padding-bottom: 40px;
+}
+
+.profesor {
+    padding-left: 213px;
+    padding-bottom: 5px;
+}
+
+.professor {
+    padding-left: 213px;
+    padding-bottom: 40px;
+    font-weight: 900;
+}
+
 .lugar_fecha {
     display: flex;
     justify-content: space-between;
-    position: absolute;
-    left: 60%;
+    padding-left: 230px;
+    padding-top: 220px;
+    padding-right: 20px;
 }
