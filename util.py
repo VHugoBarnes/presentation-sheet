@@ -1,0 +1,83 @@
+# coding: utf-8
+import json
+from datetime import datetime
+import os
+
+
+def configuration():
+    """
+        Este método se utiliza la primera vez que se inicia el programa.
+        Recolecta los datos que siempre se repiten en una hoja de presentación.
+    """
+    print("Ingresa tu nombre:", end=" ")
+    nombre = input()
+    print("Ingresa tu carrera:", end=" ")
+    carrera = input()
+
+    # Se guardan los datos como un dict (o como JSON)
+    data = {
+        "nombre": nombre,
+        "carrera": carrera
+    }
+
+    # se abre en modo escritura ("w") el archivo user.json
+    # y con el método dump de json se escribe en el archivo
+    with open("user.json", "w") as outfile:
+        json.dump(data, outfile)
+    
+
+def has_data():
+    """
+        Este método se asegura de que haya algún dato en el 
+        archivo user.json
+        En caso de que el archivo contenga un dato devolverá True.
+    """
+    if os.path.getsize("user.json") > 0:
+        return True
+    else:
+        return False
+
+def take_data():
+    """
+        Devuelve un diccionario con los datos necesarios para imprimir
+        la hoja de presentación.
+    """
+    print("Tema:", end=" ")
+    tema = input()
+    print("Asignatura:", end=" ")
+    asignatura = input()
+    print("Profesor:", end=" ")
+    profesor = input()
+    fecha = fecha_actual(datetime.now())
+
+    with open("user.json", "r") as json_file:
+        data = json.load(json_file)
+
+        datos = {
+            "tema": tema,
+            "nombre": data["nombre"],
+            "asignatura": asignatura, 
+            "carrera": data["carrera"],
+            "profesor": profesor,
+            "fecha": fecha
+        }
+
+        return datos
+
+
+def fecha_actual(date):
+    """
+        Este método devuelve un mensaje personalizado de la fecha.
+    """
+    months = ("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", 
+              "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre")
+
+    day = date.day
+
+    month = months[date.month - 1]
+    
+    year = date.year
+
+    message = "{} de {} del {}".format(day, month, year)
+
+    return message

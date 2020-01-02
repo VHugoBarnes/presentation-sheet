@@ -3,3 +3,7 @@
 
 # environment config
 env/
+
+hoja_presentacion.pdf
+
+__pycache__/
