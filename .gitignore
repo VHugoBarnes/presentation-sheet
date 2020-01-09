@@ -4,6 +4,7 @@
 # environment config
 env/
 
+# Por defecto se ignora el pdf generado
 hoja_presentacion.pdf
 
 __pycache__/

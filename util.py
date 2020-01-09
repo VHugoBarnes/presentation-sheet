@@ -37,19 +37,31 @@ def has_data():
     else:
         return False
 
+
 def take_data():
     """
         Devuelve un diccionario con los datos necesarios para imprimir
         la hoja de presentación.
     """
+
+    # Preguntamos todos los datos...
     print("Tema:", end=" ")
     tema = input()
     print("Asignatura:", end=" ")
     asignatura = input()
     print("Profesor:", end=" ")
     profesor = input()
-    fecha = fecha_actual(datetime.now())
+    print("¿Fecha de hoy? (y/n)", end=" ")
+    res = input().lower()
 
+    # ¿Fecha de hoy o de otro día?
+    if res == "y":
+        fecha = fecha_actual(datetime.now())
+    else:
+        print("Fecha:", end=" ")
+        fecha = input()
+
+    # Abre user.json para leer los datos del usuario.
     with open("user.json", "r") as json_file:
         data = json.load(json_file)
 
