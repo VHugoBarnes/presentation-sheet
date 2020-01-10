@@ -27,3 +27,5 @@ Esta diseñado específicamente para ser usado por estudiantes del instituto tec
 ## Instalación
 
 Puedes ejecutar este script descargando la versión 1.+ en el apartado de releases de code [aquí en GitHub](https://github.com/VHugoBarnes/presentation_sheet/releases)
+
+**Se recomienda usar la última release siempre**
