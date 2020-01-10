@@ -12,4 +12,18 @@ Esta diseñado específicamente para ser usado por estudiantes del instituto tec
 
     - jinja2
     - pdfkit
-   
+
+
+## Ejemplo
+
+- Cómo se ejecuta en consola:
+         
+     ![Ejecutandose en consola](https://i.imgur.com/cvw7T0x.png)
+        
+- Cómo luce el pdf al generarse:
+        
+     ![](https://i.imgur.com/3s8JytC.png)
+     
+## Instalación
+
+Puedes ejecutar este script descargando la versión 1.+ en el apartado de releases de code [aquí en GitHub](https://github.com/VHugoBarnes/presentation_sheet/releases)
