@@ -3,9 +3,13 @@ import pdfkit
 from jinja2 import Environment, FileSystemLoader
 import util
 import time
+import os
 
 
-env = Environment(loader=FileSystemLoader("templates"))
+path = os.path.dirname(os.path.abspath(__file__))
+
+
+env = Environment(loader=FileSystemLoader(path + "/templates"))
 template = env.get_template("template.html")
 
 
@@ -17,6 +21,7 @@ if util.has_data():
 else:
     util.configuration()
     usuario = util.take_data()
+    print("Tu nombre y carrera se han guardado.")
 
 # Almacena el string con el html
 html = template.render(usuario)
@@ -34,7 +39,7 @@ options = {
 
 print("Generando PDF...")
 
-pdfkit.from_string(html, 'hoja_presentacion.pdf', options=options)
+pdfkit.from_string(html, path + '/hoja_presentacion.pdf', options=options)
 
 print("La hoja de presentación se ha generado con éxito.")
-print("El pdf tiene el nombre de hoja_presentacion.pdf.")
+print("El pdf se guardó en " + path + "/hoja_presentacion.pdf.")

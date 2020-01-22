@@ -4,6 +4,9 @@ from datetime import datetime
 import os
 
 
+filepath = os.path.dirname(os.path.abspath(__file__))
+
+
 def configuration():
     """
         Este método se utiliza la primera vez que se inicia el programa.
@@ -22,7 +25,7 @@ def configuration():
 
     # se abre en modo escritura ("w") el archivo user.json
     # y con el método dump de json se escribe en el archivo
-    with open("user.json", "w") as outfile:
+    with open(filepath + "/user.json", "w") as outfile:
         json.dump(data, outfile)
     
 
@@ -32,7 +35,7 @@ def has_data():
         archivo user.json
         En caso de que el archivo contenga un dato devolverá True.
     """
-    if os.path.getsize("user.json") > 0:
+    if os.path.getsize(filepath + "/user.json") > 0:
         return True
     else:
         return False
@@ -62,7 +65,7 @@ def take_data():
         fecha = input()
 
     # Abre user.json para leer los datos del usuario.
-    with open("user.json", "r") as json_file:
+    with open(filepath + "/user.json", "r") as json_file:
         data = json.load(json_file)
 
         datos = {
