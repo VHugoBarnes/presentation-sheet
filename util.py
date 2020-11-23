@@ -84,8 +84,8 @@ def fecha_actual(date):
     """
         Este método devuelve un mensaje personalizado de la fecha.
     """
-    months = ("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", 
-              "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre")
+    months = ("enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", 
+              "agosto", "septiembre", "octubre", "noviembre", "diciembre")
 
     day = date.day
 

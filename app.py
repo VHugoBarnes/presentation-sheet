@@ -10,7 +10,7 @@ path = os.path.dirname(os.path.abspath(__file__))
 
 
 env = Environment(loader=FileSystemLoader(path + "/templates"))
-template = env.get_template("template.html")
+template = env.get_template("new-template.html")
 
 
 # Verifica si el archivo user.json ya contiene los datos del usuario.
@@ -25,6 +25,7 @@ else:
 
 # Almacena el string con el html
 html = template.render(usuario)
+css = './templates/styles.css'
 
 options = {
     'page-size': 'Letter',
@@ -39,7 +40,7 @@ options = {
 
 print("Generando PDF...")
 
-pdfkit.from_string(html, path + '/hoja_presentacion.pdf', options=options)
+pdfkit.from_string(html, path + '/hoja_presentacion.pdf', options=options, css=css)
 
 print("La hoja de presentación se ha generado con éxito.")
 print("El pdf se guardó en " + path + "/hoja_presentacion.pdf.")

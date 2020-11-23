@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Presentation sheet</title>
+    <style>
+        * {
+            color: #313030;
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .main-container {
+            height: 1342px;
+            position: absolute;
+            width: 1040px;
+        }
+
+        .image-container {
+            position: absolute;
+            z-index: -1;
+        }
+
+        .image-container > img {
+            height: 1342px;
+            width: 1040px;
+        }
+
+        .block-container {
+            display: -webkit-box;
+            display: block;
+            margin-bottom: 40px;
+        }
+
+        .content-container {
+            
+            margin-top: 280px;
+        }
+
+        .flex-container {
+            display: -webkit-box;
+            display: flex;
+            -webkit-box-pack: space-between;
+            justify-content: space-between;
+            width: 1040px;
+            position: absolute;
+            top: 1080px;
+        }
+
+        .negritas {
+            display: -webkit-box;
+            display: flex;
+            font-size: 2.6rem;
+            font-weight: bold;
+            -webkit-box-pack: center;
+            justify-content: center;
+        }
+
+        .input {
+            display: -webkit-box;
+            display: flex;
+            font-size: 2rem;
+            -webkit-box-pack: center;
+            justify-content: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="image-container">
+            <img src="https://i.imgur.com/E3bAt2D.jpg" alt="background">
+        </div>
+        <div class="content-container">
+            <div class="block-container">
+                <p class="negritas">Tema</p>
+                <p class="input">{{tema}}</p>
+            </div>
+            <div class="block-container">
+                <p class="negritas">Estudiante</p>
+                <p class="input">{{nombre}}</p>
+            </div>
+            <div class="block-container">
+                <p class="negritas">Asignatura</p>
+                <p class="input">{{asignatura}}</p>
+            </div>
+            <div class="block-container">
+                <p class="negritas">Carrera</p>
+                <p class="input">{{carrera}}</p>
+            </div>
+            <div class="block-container">
+                <p class="negritas">Docente</p>
+                <p class="input">{{profesor}}</p>
+            </div>
+        </div>
+        <div class="flex-container">
+            <p class="input">H. Matamoros Tamaulipas</p>
+            <p class="input">{{fecha}}</p>
+        </div>
+    </div>
+</body>
+</html>

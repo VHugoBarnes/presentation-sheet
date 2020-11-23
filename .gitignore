@@ -3,6 +3,7 @@
 
 # environment config
 env/
+start/
 
 # Por defecto se ignora el pdf generado
 hoja_presentacion.pdf
