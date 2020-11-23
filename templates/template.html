@@ -82,7 +82,9 @@
             </div>
             <div class="block-container">
                 <p class="negritas">Estudiante</p>
-                <p class="input">{{nombre}}</p>
+                {% for n in nombre %}
+                    <p class="input">{{ n }}</p>
+                {% endfor %}
             </div>
             <div class="block-container">
                 <p class="negritas">Asignatura</p>

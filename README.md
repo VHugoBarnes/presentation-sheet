@@ -3,6 +3,9 @@
 Con este pequeño script se evita la perdida de tiempo de estar creando una hoja de presentación. 
 Esta diseñado específicamente para ser usado por estudiantes del instituto tecnológico de Matamoros :).
 
+## NUEVO
+Ahora puedes generar una hoja de presentación hasta para cinco personas
+
 ## Requisitos
 - Tener instalado wkhtmltopdf
 
@@ -16,13 +19,21 @@ Esta diseñado específicamente para ser usado por estudiantes del instituto tec
 
 ## Ejemplo
 
-- Cómo se ejecuta en consola:
+- Cómo se ejecuta en consola (Para una persona):
          
      ![Ejecutandose en consola](use.png)
+
+- Cómo se ejecuta en consola (Para cinco personas):
+
+    ![Ejecutandose en consola](use2.png)
         
-- Cómo luce el pdf al generarse:
+- Cómo luce el pdf al generarse (Para una persona):
         
      ![](output.png)
+
+- Cómo luce el pdf al generarse (Para 5 personas):
+        
+     ![](output2.png)
      
 ## Instalación
 

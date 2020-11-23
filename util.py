@@ -47,9 +47,24 @@ def take_data():
         la hoja de presentación.
     """
 
+    # Preguntamos si es uno o más estudiantes
+    print("Ingresa la cantidad de estudiantes (de 1 a 5, contandote):", end=" ")
+    cantidad_estudiante = int(input())
+
+    if(cantidad_estudiante <= 0 or cantidad_estudiante > 5):
+        raise Exception("Ingresa un número del 1 al 5, por favor")
+
     # Preguntamos todos los datos...
     print("Tema:", end=" ")
     tema = input()
+
+    students_arr = []
+
+    if(cantidad_estudiante >= 2 and cantidad_estudiante <= 5):
+        for x in range(cantidad_estudiante):
+            i = input("Nombre del estudiante #" + str(x+1) + ":")
+            students_arr.append(i)
+    
     print("Asignatura:", end=" ")
     asignatura = input()
     print("Profesor:", end=" ")
@@ -63,22 +78,26 @@ def take_data():
     else:
         print("Fecha:", end=" ")
         fecha = input()
-    
+
     # Abre user.json para leer los datos del usuario.
     with open(filepath + "/user.json", "r") as json_file:
         data = json.load(json_file)
 
+        if(cantidad_estudiante >= 2 and cantidad_estudiante <= 5):
+            nombre = students_arr
+        else:
+            nombre = [data["nombre"]]
+        
         datos = {
             "tema": tema,
-            "nombre": data["nombre"],
+            "nombre": nombre,
             "asignatura": asignatura, 
             "carrera": data["carrera"],
             "profesor": profesor,
             "fecha": fecha
         }
 
-        return datos
-
+    return datos
 
 def fecha_actual(date):
     """
