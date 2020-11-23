@@ -63,7 +63,7 @@ def take_data():
     else:
         print("Fecha:", end=" ")
         fecha = input()
-
+    
     # Abre user.json para leer los datos del usuario.
     with open(filepath + "/user.json", "r") as json_file:
         data = json.load(json_file)
