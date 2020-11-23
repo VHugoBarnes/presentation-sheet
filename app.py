@@ -25,7 +25,6 @@ else:
 
 # Almacena el string con el html
 html = template.render(usuario)
-css = './templates/styles.css'
 
 options = {
     'page-size': 'Letter',
@@ -40,7 +39,7 @@ options = {
 
 print("Generando PDF...")
 
-pdfkit.from_string(html, path + '/hoja_presentacion.pdf', options=options, css=css)
+pdfkit.from_string(html, path + '/hoja_presentacion.pdf', options=options)
 
 print("La hoja de presentación se ha generado con éxito.")
 print("El pdf se guardó en " + path + "/hoja_presentacion.pdf.")
