@@ -10,7 +10,7 @@ path = os.path.dirname(os.path.abspath(__file__))
 
 
 env = Environment(loader=FileSystemLoader(path + "/templates"))
-template = env.get_template("new-template.html")
+template = env.get_template("template.html")
 
 
 # Verifica si el archivo user.json ya contiene los datos del usuario.
