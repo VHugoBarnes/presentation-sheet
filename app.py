@@ -29,10 +29,10 @@ css = './templates/styles.css'
 
 options = {
     'page-size': 'Letter',
-    'margin-top': '0.1in',
+    'margin-top': '0in',
     'margin-right': '0.1in',
     'margin-bottom': '0.1in',
-    'margin-left': '0.1in',
+    'margin-left': '0in',
     'page-height': 279,
     'page-width': 216,
     'quiet': '' # Para que no se muestre en consola los prints de wkhtmltopdf.
